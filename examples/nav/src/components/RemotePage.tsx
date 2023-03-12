@@ -8,7 +8,7 @@ type RemotePageProps = {
 
 const RemotePage: React.FC<RemotePageProps> = ({ title, description }: RemotePageProps) => {
   React.useEffect(() => {
-    console.log('RemotePage test 🙌');
+    console.log('RemotePage testando 🙌');
     document.documentElement.setAttribute('data-remote-page-mounted', '1');
   }, []);
 
