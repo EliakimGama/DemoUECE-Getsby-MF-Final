@@ -13,9 +13,22 @@ const RemotePage: React.FC<RemotePageProps> = ({ title, description }: RemotePag
   }, []);
 
   return (
-    <div className={pageStyle}>
-      <h1>{title}</h1>
-      <p>{description}</p>
+    <div>
+      {/* Nav bar */}
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Ajuda</a></li>
+        </ul>
+      </nav>
+
+      {/* Conteúdo da página */}
+      <div className={pageStyle}>
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };
