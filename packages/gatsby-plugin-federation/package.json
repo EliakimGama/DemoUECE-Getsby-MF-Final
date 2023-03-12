@@ -1,0 +1,65 @@
+{
+  "name": "gatsby-plugin-federation",
+  "version": "0.0.0-development",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "module-federation",
+    "webpack"
+  ],
+  "description": "Gatsby Plugin for enabling Module Federation",
+  "license": "MIT",
+  "author": "Tobias Høegh <tobias@tujo.no>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tujoworker/gatsby-plugin-federation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tujoworker/gatsby-plugin-federation/issues"
+  },
+  "main": "dist/gatsby-plugin-federation.cjs.js",
+  "module": "dist/gatsby-plugin-federation.esm.js",
+  "scripts": {
+    "release": "yarn copy-readme && yarn build && semantic-release",
+    "release:dry": "semantic-release --dry-run",
+    "copy-readme": "cp ../../README.md ./README.md",
+    "build": "preconstruct build",
+    "watch": "preconstruct watch",
+    "test:types": "tsc --noEmit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "postinstall": "preconstruct dev",
+  "prepublish": "yarn build",
+  "exports": {
+    ".": {
+      "module": "./dist/gatsby-plugin-federation.esm.js",
+      "default": "./dist/gatsby-plugin-federation.cjs.js"
+    },
+    "./gatsby-node.js": "./gatsby-node.js",
+    "./package.json": "./package.json"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ]
+  },
+  "peerDependencies": {
+    "gatsby": ">=4",
+    "react": ">=17"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "7.18.6",
+    "@babel/preset-typescript": "7.18.6",
+    "@preconstruct/cli": "2.2.2",
+    "@types/react": "18.0.27",
+    "fs-extra": "11.1.0",
+    "semantic-release": "20.1.0",
+    "typescript": "4.9.4"
+  },
+  "dependencies": {
+    "@module-federation/node": "0.11.1"
+  }
+}
