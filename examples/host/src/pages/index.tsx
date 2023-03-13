@@ -19,12 +19,13 @@ const App = () => {
         onClick={handleRemoteButtonClick}
         text={`Remote Button ${buttonCount} 🙌`}
       />{' '}
+
+      <h1>Nav-bar</h1>
       <RemotePage
         fallback={<p role="status">Loading...</p>}
-        title="Remote Page"
-        description="This is a remote page."
+        title=""
+        description=""
       />{' '}
-      Check out the <Link to="/vanilla">Vanilla</Link> solution.
     </>
   )
 

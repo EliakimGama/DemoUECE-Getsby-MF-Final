@@ -17,7 +17,7 @@ const RemotePage: React.FC<RemotePageProps> = ({ title, description }: RemotePag
       {/* Nav bar */}
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#">Home okok</a></li>
           <li><a href="#">Sobre</a></li>
           <li><a href="#">Contato</a></li>
           <li><a href="#">Ajuda</a></li>
